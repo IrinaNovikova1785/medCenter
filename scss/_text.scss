@@ -1,0 +1,13 @@
+.title{
+    @include fluid(font-size, 36px, 48px);
+    font-weight: 500;
+    line-height: 1.25;
+    color: #374151;
+    span{
+        color: $main;
+    }
+    &--white{
+        color: #FFF;
+        font-weight: 900;
+    }
+}

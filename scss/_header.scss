@@ -1,0 +1,48 @@
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 15px;
+        width: 100%;
+    }
+    &__contacts{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        a{
+            color: #FFF;
+        }
+        &-link{
+            font-weight: 600;
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+    .logo{
+        object-fit: contain;
+        height: 80px;
+        border-radius: 3px;
+    }
+
+}
+
+.nav{
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        li a{
+            color: #FFF;
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+}

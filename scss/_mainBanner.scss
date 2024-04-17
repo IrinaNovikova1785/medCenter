@@ -1,0 +1,84 @@
+.mainBanner{
+    margin-bottom: 0;
+    position: relative;
+    &__wrapper{
+        position: relative;
+        padding-top: 160px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &__bg{
+        position: absolute;
+        object-fit: cover;
+        transform: scaleX(-1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    &__text{
+        @include fluid(margin-bottom, 30px, 90px);
+        position: relative;
+        z-index: 1;
+        p{
+            @include fluid(font-size, 16px, 18px);
+            max-width: 500px;
+            color: #FFF;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+    }
+    &__title{
+        max-width: 650px;
+        margin-bottom: 20px;
+    }
+    &__btns{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(333deg, #0072A7 0%, #003F5B 100%);
+        opacity: .4;
+        z-index: 0;
+    }
+}
+
+.forYou{
+    @include fluid(padding-top, 30px, 60px);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    border-top: 1px solid #b7cad4;
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        img{
+            object-fit: contain;
+            height: 30px;
+            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(84deg) brightness(104%) contrast(107%);
+        }
+        .h64{
+            height: 55px;
+        }
+    }
+    &__title{
+        color: #FFF;
+        max-width: 180px;
+    }
+    &__text{
+        p{
+            color: #FFF;
+        }
+    }
+}
