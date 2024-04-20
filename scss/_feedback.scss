@@ -83,6 +83,8 @@
         line-height: 24px;
         letter-spacing: -0.54px;
         border-bottom: 1px solid #FFF;
+        border-radius: 0;
+        outline: none;
         transition: all .38 ease-in-out;
         &::placeholder {
             color: #FFF;

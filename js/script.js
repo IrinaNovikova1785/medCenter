@@ -224,7 +224,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 let elemBottom = elemTop + $(this).outerHeight();
                 let elementId = $(this).attr('id');
                 let correspondingTabItem = $('[id="'+elementId+'"]');
-                if (scrollDistance >= elemTop + 30 && scrollDistance <= elemBottom + 5 ) {
+                if (scrollDistance >= elemTop - 300 && scrollDistance <= elemBottom + 5 ) {
                     $('[data-scroll]').parent().removeClass('active')
                     $('[data-scroll="#'+elementId+'"]').parent().addClass('active');
 
