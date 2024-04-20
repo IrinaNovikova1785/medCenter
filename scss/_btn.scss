@@ -1,23 +1,70 @@
 .btn{
     @include fluid(font-size, 14px, 16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     padding: 20px;
     background-color: $main;
     color: #FFF;
     border: 1px solid transparent;
     width: fit-content;
+    transition: .38s ease-in-out;
     cursor: pointer;
+    p{
+        color: #FFF;
+        margin-bottom: 0;
+        transition: .38s ease-in-out;
+    }
     &:hover{
         background-color: #FFF;
         border-color: $main;
         color: $main;
+        p{
+            color: $main;
+        }
     }
     &--white{
         background-color: #FFF;
         color: #374151;
+        p{
+            color: #374151;
+        }
         &:hover{
             background-color: #374151;
             color: #FFF;
             border-color: #374151;
+            p{
+                color: #FFF;
+            }
+            svg path{
+                fill: #FFF;
+            }
         }
+    }
+    &--wTransp{
+        background-color: #FFF;
+        color: #374151;
+        p{
+            color: #374151;
+        }
+        &:hover{
+            background-color: transparent;
+            color: #FFF;
+            border-color: #FFF;
+            p{
+                color: #FFF;
+            }
+            svg path{
+                fill: #FFF;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .btn{
+        padding: 15px 20px;
+        font-size: 13px;
     }
 }

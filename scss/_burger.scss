@@ -1,0 +1,175 @@
+.burger {
+    display: none;
+    width: 26px;
+    cursor: pointer;
+    z-index: 30;
+    flex-shrink: 0;
+    &--blue{
+      .burger__btn{
+        span{
+          background: #1e96cd;
+        }
+      }
+    }
+    &__btn {
+      width: 80%;
+      height: fit-content;
+      transition: backgroud .38s ease-in-out;
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #FFF;
+        transition: all .3s;
+        border-radius: 3px;
+        position: relative;
+        &:last-child{
+          width: 60%;
+          margin-left: auto;
+        }
+      }
+    }
+    span + span {
+      margin-top: 4px;
+    }
+    
+    &.active span{
+      background: #FFF;
+    }
+    &.active span:nth-child(1) {
+      animation: ease .7s top forwards;
+    }
+  
+    &.notActive span:nth-child(1) {
+      animation: ease .7s top-2 forwards;
+    }
+  
+    &.active span:nth-child(2) {
+      animation: ease .7s scaled forwards;
+    }
+  
+    &.notActive span:nth-child(2) {
+      animation: ease .7s scaled-2 forwards;
+    }
+  
+    &.active span:nth-child(3) {
+      margin-top: 34px;
+      width: 100%;
+      animation: ease .7s bottom forwards;
+    }
+  
+    &.notActive span:nth-child(3) {
+      animation: ease .7s bottom-2 forwards;
+    }
+  
+    @keyframes top {
+      0% {
+        top: 0;
+        transform: rotate(0);
+      }
+      50% {
+        top: 22px;
+        transform: rotate(0);
+      }
+      100% {
+        top: 22px;
+        transform: rotate(45deg);
+      }
+    }
+  
+    @keyframes top-2 {
+      0% {
+        top: 22px;
+        transform: rotate(45deg);
+      }
+      50% {
+        top: 22px;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 0;
+        transform: rotate(0deg);
+      }
+    }
+  
+    @keyframes bottom {
+      0% {
+        bottom: 0;
+        transform: rotate(0);
+      }
+      50% {
+        bottom: 22px;
+        transform: rotate(0);
+      }
+      100% {
+        bottom: 22px;
+        transform: rotate(135deg);
+      }
+    }
+  
+    @keyframes bottom-2 {
+      0% {
+        bottom: 22px;
+        transform: rotate(135deg);
+      }
+      50% {
+        bottom: 22px;
+        transform: rotate(0);
+      }
+      100% {
+        bottom: 0;
+        transform: rotate(0);
+      }
+    }
+  
+    @keyframes scaled {
+      50% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+  
+    @keyframes scaled-2 {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+}
+
+@media (max-width: 992px) {
+    .burger{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      right: 50px;
+      z-index: 13;
+      width: 40px;
+      height: 40px;
+      padding: 0 3px;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #111;
+        border-radius: 50%;
+        opacity: .5;
+      }
+      &__btn{
+        position: relative;
+        z-index: 1;
+      }
+    }
+}

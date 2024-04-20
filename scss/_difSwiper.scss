@@ -1,0 +1,81 @@
+.difSwiper{
+    @include fluid(padding-top, 30px, 60px);
+    @include fluid(padding-bottom, 30px, 60px);
+    background-color: $section;
+    overflow: hidden;
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__slide{
+        display: flex;
+        flex-direction: column;
+        background-color: #FFF;
+        padding: 30px;
+        height: auto;
+        &-photo{
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative;
+            background-color: $section;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            img{
+                object-fit: contain;
+                width: 218px;
+                height: 175px;
+                user-select: none;
+            }
+        }
+        &-title{
+            @include fluid(font-size, 16px, 18px);
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        &-subtitle{
+            line-height: 1.3;
+            margin-bottom: 30px;
+        }
+        .btn{
+            padding: 10px 20px;
+            margin-top: auto;
+        }
+    }
+    &__navigation{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        user-select: none;
+        .swiper-button-next, .swiper-button-prev{
+            position: static;
+            background-color: $main;
+            height: 40px;
+            width: 40px;
+            &::after{
+                font-size: 20px;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .difSwiper{
+        &__navigation{
+            .swiper-button-next, .swiper-button-prev{
+                width: 30px;
+                height: 30px;
+                &::after{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

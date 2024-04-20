@@ -11,3 +11,15 @@
         font-weight: 900;
     }
 }
+
+@media (max-width: 768px) {
+    .title{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title{
+        font-size: 26px;
+    }
+}

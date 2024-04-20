@@ -1,6 +1,7 @@
 .whatTreat{
     @include fluid(padding-top, 30px, 60px);
     @include fluid(padding-bottom, 30px, 60px);
+    margin-bottom: 0;
     &__title{
         margin-bottom: 30px;
     }
@@ -20,40 +21,32 @@
             justify-content: space-between;
             align-items: center;
             gap: 20px;
-            span{
-                position: relative;
-                width: 26px;
-                height: 26px;
-                padding: 5px;
-                border-radius: 50%;
+            cursor: pointer;
+            img{
+                object-fit: contain;
+                height: 20px;
+                rotate: 45deg;
                 transition: .38s ease-in-out;
-                &::after, &::before{
-                    position: absolute;
-                    background-color: #374151;
-                }
-                &::after{
-                    content: '';
-                    width: 100%;
-                    height: 1px;
-                    top: 50%;
-                    left: 0;
-                    translate: 0 -50%;
-                }
-                &::before{
-                    content: '';
-                    width: 1px;
-                    height: 100%;
-                    top: 0;
-                    left: 50%;
-                    translate: 50% 0;
-                }
-                &.rotate{
-                    rotate: 45deg
-                }
+                filter: brightness(0) saturate(100%) invert(18%) sepia(6%) saturate(7%) hue-rotate(320deg) brightness(101%) contrast(84%);
             }
             &-name{
                 @include fluid(font-size, 20px, 24px);
                 font-weight: 500;
+            }
+            &-close{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                transition: .38s ease-in-out;
+                border-radius: 50%;
+                &.rotate{
+                    background-color: #eee;
+                    img{
+                        rotate: 0deg
+                    }
+                }
             }
         }
         &Hidden{
@@ -88,7 +81,7 @@
         }
         &:hover{
             .whatTreat__accordeonTop{
-                span{
+                &-close{
                     background-color: #eee;
                 }
             }

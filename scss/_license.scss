@@ -1,0 +1,24 @@
+.license{
+    @include fluid(padding-top, 30px, 60px);
+    @include fluid(padding-bottom, 30px, 60px);
+    background-color: $section;
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__slide{
+        img{
+            @include fluid(height, 470px, 582px);
+            object-fit: contain;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .license{
+        &__slide{
+            img{
+                height: 405px;
+            }
+        }
+    }
+}

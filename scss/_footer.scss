@@ -1,0 +1,67 @@
+.footer{
+    @include fluid(padding-top, 30px, 60px);
+    @include fluid(padding-bottom, 30px, 60px);
+    @include fluid(margin-top, 60px, 140px);
+    background-color: $main;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        p{
+            @include fluid(font-size, 20px, 24px);
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #FFF;
+        }
+    }
+    &__bottom{
+        display: flex;
+        gap: 20px;
+        &Contact{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 50%;
+            &-title{
+                @include fluid(font-size, 24px, 26px);
+                color: #FFF;
+                margin-bottom: 20px;
+            }
+            &-item{
+                p, a{
+                    color: #FFF;
+                }
+                a, p:nth-child(2){
+                    @include fluid(font-size, 16px, 20px);
+                }
+            }
+        }
+    }
+    .logo{
+        height: 100px;
+    }
+}
+
+#ofice{
+    @include fluid(height, 300px, 500px);
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    .footer{
+        &__bottom{
+            flex-direction: column;
+            &Contact{
+                width: 100%;
+            }
+        }
+    }
+    #ofice{
+        width: 100%;
+    }
+}

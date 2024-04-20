@@ -42,7 +42,7 @@ a {
   color: rgba(73, 80, 87, 1);
 }
 
-a, p, input, button, .btn, span, li, [class^="icon-"], [class*=" icon-"] {
+a, p, input, button, .btn, span, li, [class^="icon-"], [class*=" icon-"], svg, svg rect{
   transition: .38s ease-in-out;
 }
 
@@ -64,7 +64,7 @@ body {
   }
 }
 
-section {
-  @include fluid(margin-bottom, 30px, 140px);
-}
+// section {
+//   @include fluid(margin-bottom, 30px, 140px);
+// }
 

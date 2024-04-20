@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./plugins/fancybox/fancybox.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Index</title>
 </head>
@@ -13,22 +15,31 @@
                 <a href="#">
                     <img src="./img/logoo.jpeg" class="logo">    
                 </a>
-                <nav class="nav">
+                <div class="nav">
                     <ul>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">Что мы лечим</a></li>
-                        <li><a href="#">Наши услуги</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li class="active"><a data-scroll="#n0">Главная</a></li>
+                        <li><a data-scroll="#n1">Наши услуги</a></li>
+                        <li><a data-scroll="#n2">Что мы лечим</a></li>
+                        <li><a data-scroll="#n3">Контакты</a></li>
                     </ul>
-                </nav>
+                </div>
                 <div class="header__contacts">
                     <a href="tel: +79012240022" class="header__contacts-link">+7 (901) 224-00-22</a>
-                    <a href="#call" class="btn" data-fancybox>Вам перезвонить?</a>
+                    <a href="#callback" class="btn" data-fancybox>
+                    <p>Вам перезвонить?</p>
+                </a>
+                </div>
+                <div class="burger">
+                    <div class="burger__btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="mainBanner">
+    <section class="mainBanner" id="n0">
         <img src="./img/banner/bgg4.jpeg" class="mainBanner__bg">
         <div class="container">
             <div class="mainBanner__wrapper">
@@ -38,44 +49,102 @@
                         Поможем даже в самых тяжелых случаях, предоставим гарантию 2 года 
                     </p>
                     <div class="mainBanner__btns">
-                        <a href="#" class="btn">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</a>
-                        <a href="#" class="btn btn--white">Получить консультацию в WhatsApp</a>
+                        <a href="#callback" data-fancybox class="btn">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</a>
+                        <a href="https://api.whatsapp.com/send/?phone=79018055838" class="btn btn--white">
+                            <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_12_188)">
+                                <path d="M8.00201 0H7.99801C3.58701 0 1.04969e-05 3.588 1.04969e-05 8C-0.0027286 9.68501 0.530659 11.3272 1.52301 12.689L0.526011 15.661L3.60101 14.678C4.90538 15.5434 6.43669 16.0034 8.00201 16C12.413 16 16 12.411 16 8C16 3.589 12.413 0 8.00201 0ZM12.657 11.297C12.464 11.842 11.698 12.294 11.087 12.426C10.669 12.515 10.123 12.586 8.28501 11.824C5.93401 10.85 4.42001 8.461 4.30201 8.306C4.18901 8.151 3.35201 7.041 3.35201 5.893C3.35201 4.745 3.93501 4.186 4.17001 3.946C4.36301 3.749 4.68201 3.659 4.98801 3.659C5.08701 3.659 5.17601 3.664 5.25601 3.668C5.49101 3.678 5.60901 3.692 5.76401 4.063C5.95701 4.528 6.42701 5.676 6.48301 5.794C6.54001 5.912 6.59701 6.072 6.51701 6.227C6.44201 6.387 6.37601 6.458 6.25801 6.594C6.14001 6.73 6.02801 6.834 5.91001 6.98C5.80201 7.107 5.68001 7.243 5.81601 7.478C5.95201 7.708 6.42201 8.475 7.11401 9.091C8.00701 9.886 8.73101 10.14 8.99001 10.248C9.18301 10.328 9.41301 10.309 9.55401 10.159C9.73301 9.966 9.95401 9.646 10.179 9.331C10.339 9.105 10.541 9.077 10.753 9.157C10.969 9.232 12.112 9.797 12.347 9.914C12.582 10.032 12.737 10.088 12.794 10.187C12.85 10.286 12.85 10.751 12.657 11.297Z" fill="#374151"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_12_188">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                                
+                            <p>
+                                Получить консультацию в WhatsApp
+                            </p>
+                        </a>
                     </div>
                 </div>
                 <div class="forYou">
                     <div class="forYou__item">
-                        <img src="./img/icon/effect.png" class="h64">
+                        <img src="./img/icon/eff.png" class="h33">
                         <div class="forYou__text">
-                            <div class="forYou__title"><b>Эффективность</b></div>
-                            <p> лечения - более 75%</p>
+                            <div class="forYou__title"><b>Эффективность </b>лечения - более 75%</div>
                         </div>
                     </div>
                     <div class="forYou__item">
                         <img src="./img/icon/special.png">
                         <div class="forYou__text">
-                            <div class="forYou__title">Специалисты</div>
-                            <p> с опытом работы <b>более 15 лет</b></p>
+                            <div class="forYou__title">Специалисты с опытом работы <b>более 15 лет</b></div>
                         </div>
                     </div>
                     <div class="forYou__item">
                         <img src="./img/icon/house.png">
                         <div class="forYou__text">
-                            <div class="forYou__title">Срочный выезд на дом </div>
-                            <p><b> 24/7 без выходных</b></p>
+                            <div class="forYou__title">Срочный выезд на дом <b> 24/7 без выходных</b></div>
                         </div>
                     </div>
                     <div class="forYou__item">
                         <img src="./img/icon/money.png">
                         <div class="forYou__text">
-                            <div class="forYou__title">Рассчитать стоимость лечения</div>
-                            <p> по звонку за несколько минут</p>
+                            <div class="forYou__title">Рассчитать стоимость лечения по звонку за несколько минут</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="treat">
+    <section class="choice">
+        <div class="container">
+            <h2 class="difSwiper__title title">Почему выбирают нас?</h2>
+            <div class="choice__wrapper">
+                <div class="choice__item">
+                    <img src="./img/icon/complex.png">
+                    <div class="choice__item-title">Почему выбирают нас?</div>
+                    <p>В клинике «Миннесота» вы можете пройти комплексное лечение от зависимостей!</p>
+                </div>
+                <div class="choice__item">
+                    <img src="./img/icon/anonymous.png">
+                    <div class="choice__item-title">100%</div>
+                    <p>Гарантии анонимности и конфиденциальности</p>
+                </div>
+                <div class="choice__item">
+                    <img src="./img/icon/online.png">
+                    <div class="choice__item-title">Онлайн консультации</div>
+                    <p>Специалисты Клиники проводят постоянные онлайн консультации с пациентами.</p>
+                </div>
+                <div class="choice__item">
+                    <img src="./img/icon/guarantee.png">
+                    <div class="choice__item-title">82%</div>
+                    <p>Гарантия высокого результата ремиссии (выздоровления)</p>
+                </div>
+                <div class="choice__item">
+                    <img src="./img/icon/experience.png">
+                    <div class="choice__item-title">20 лет</div>
+                    <p>Стаж работы специалистов клиники — более 20 лет.</p>
+                </div>
+                <div class="choice__item">
+                    <img src="./img/icon/adaptation.png">
+                    <div class="choice__item-title">Социальная адаптация</div>
+                    <p>«Миннесота» помогает своим пациентам в трудоустройстве / социальной адаптации.</p>
+                </div>
+                <div class="choice__item">
+                    <img src="./img/icon/standard.png">
+                    <div class="choice__item-title">Международные стандарты</div>
+                    <p>Все методы лечения осуществляются в соответствии с международными стандартами.</p>
+                </div>
+                <div class="choice__item">
+                    <img src="./img/icon/certificate.png">
+                    <div class="choice__item-title">Сертификаты и лицензии</div>
+                    <p>Клиника «Миннесота» имеет  все необходимые лицензии и сертификаты</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="treat" id="n1">
         <div class="container">
             <h2 class="treat__title title">Наши услуги</h2>
             <div class="treat__wrapper">
@@ -95,7 +164,7 @@
                     <img src="./img/icon/treatment.svg">
                     <div class="treat__item-title">Лечение зависимости</div>
                     <div class="treat__itemHidden">
-                        <img src="./img/treat2.jpeg" class="treat__itemHidden-img">
+                        <img src="./img/treat3.png" class="treat__itemHidden-img">
                         <div class="treat__itemHidden-title">Лечение зависимости</div>
                         <p>
                             Уже более 25 лет “Миннесота” осуществляет успешное лечение зависимого поведения: мы помогаем людям избавиться 
@@ -108,7 +177,7 @@
                     <img src="./img/icon/consultation.svg">
                     <div class="treat__item-title">Психологическое консультирование взрослых и детей</div>
                     <div class="treat__itemHidden">
-                        <img src="./img/treat3.png" class="treat__itemHidden-img">
+                        <img src="./img/treat2.jpeg" class="treat__itemHidden-img">
                         <div class="treat__itemHidden-title">Психологическое консультирование взрослых и детей</div>
                         <p>
                             Квалифицированная психологическая помощь: мы работаем как со взрослыми, так и с детьми. Наши специалисты помогут 
@@ -133,7 +202,7 @@
             </div>
         </div>
     </section>
-    <section class="whatTreat">
+    <section class="whatTreat" id="n2">
         <div class="container">
             <h2 class="whatTreat__title title">Что мы лечим:</h2>
             <div class="whatTreat__wrapper">
@@ -142,7 +211,9 @@
                         <div class="whatTreat__accordeonTop-name">
                             Лечение алкоголизма
                         </div>
-                        <span></span>
+                        <div class="whatTreat__accordeonTop-close">
+                            <img src="./img/icon/close.png">
+                        </div>
                     </div>
                     <div class="whatTreat__accordeonHidden">
                         <ul>
@@ -153,15 +224,17 @@
                             <li>step 5</li>
                             <li>step 6</li>
                         </ul>
-                        <div class="btn">Связаться с нами</div>
+                        <a href="#callback" data-fancybox class="btn">Связаться с нами</a>
                     </div>
                 </div>
                 <div class="whatTreat__accordeon">
                     <div class="whatTreat__accordeonTop">
                         <div class="whatTreat__accordeonTop-name">
-                            Лечение алкоголизма
+                            Выведение из запоя
                         </div>
-                        <span></span>
+                        <div class="whatTreat__accordeonTop-close">
+                            <img src="./img/icon/close.png">
+                        </div>
                     </div>
                     <div class="whatTreat__accordeonHidden">
                         <ul>
@@ -172,15 +245,17 @@
                             <li>step 5</li>
                             <li>step 6</li>
                         </ul>
-                        <div class="btn">Связаться с нами</div>
+                        <a href="#callback" data-fancybox class="btn">Связаться с нами</a>
                     </div>
                 </div>
                 <div class="whatTreat__accordeon">
                     <div class="whatTreat__accordeonTop">
                         <div class="whatTreat__accordeonTop-name">
-                            Лечение алкоголизма
+                            Кодирование от алкоголизма
                         </div>
-                        <span></span>
+                        <div class="whatTreat__accordeonTop-close">
+                            <img src="./img/icon/close.png">
+                        </div>
                     </div>
                     <div class="whatTreat__accordeonHidden">
                         <ul>
@@ -191,13 +266,534 @@
                             <li>step 5</li>
                             <li>step 6</li>
                         </ul>
-                        <div class="btn">Связаться с нами</div>
+                        <a href="#callback" data-fancybox class="btn">Связаться с нами</a>
+                    </div>
+                </div>
+                <div class="whatTreat__accordeon">
+                    <div class="whatTreat__accordeonTop">
+                        <div class="whatTreat__accordeonTop-name">
+                            Лечение наркомании
+                        </div>
+                        <div class="whatTreat__accordeonTop-close">
+                            <img src="./img/icon/close.png">
+                        </div>
+                    </div>
+                    <div class="whatTreat__accordeonHidden">
+                        <ul>
+                            <li>step 1</li>
+                            <li>step 2</li>
+                            <li>step 3</li>
+                            <li>step 4</li>
+                            <li>step 5</li>
+                            <li>step 6</li>
+                        </ul>
+                        <a href="#callback" data-fancybox class="btn">Связаться с нами</a>
+                    </div>
+                </div>
+                <div class="whatTreat__accordeon">
+                    <div class="whatTreat__accordeonTop">
+                        <div class="whatTreat__accordeonTop-name">
+                            Лечение игромании
+                        </div>
+                        <div class="whatTreat__accordeonTop-close">
+                            <img src="./img/icon/close.png">
+                        </div>
+                    </div>
+                    <div class="whatTreat__accordeonHidden">
+                        <ul>
+                            <li>step 1</li>
+                            <li>step 2</li>
+                            <li>step 3</li>
+                            <li>step 4</li>
+                            <li>step 5</li>
+                            <li>step 6</li>
+                        </ul>
+                        <a href="#callback" data-fancybox class="btn">Связаться с нами</a>
+                    </div>
+                </div>
+                <div class="whatTreat__accordeon">
+                    <div class="whatTreat__accordeonTop">
+                        <div class="whatTreat__accordeonTop-name">
+                            Плазмаферез
+                        </div>
+                        <div class="whatTreat__accordeonTop-close">
+                            <img src="./img/icon/close.png">
+                        </div>
+                    </div>
+                    <div class="whatTreat__accordeonHidden">
+                        <ul>
+                            <li>step 1</li>
+                            <li>step 2</li>
+                            <li>step 3</li>
+                            <li>step 4</li>
+                            <li>step 5</li>
+                            <li>step 6</li>
+                        </ul>
+                        <a href="#callback" data-fancybox class="btn">Связаться с нами</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="difSwiper">
+        <div class="container">
+            <div class="difSwiper__top">
+                <h2 class="difSwiper__title title">Наши специалисты</h2>
+                <div class="difSwiper__navigation">
+                    <div class="difSwiper__prev swiper-button-prev"></div>
+                    <div class="difSwiper__next swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="difSwiper__swiper swiper-wrapper">
+                <div class="difSwiper__wrapper swiper-wrapper">
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d1.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Крючков Андрей Николаевич</div>
+                        <div class="difSwiper__slide-subtitle">Главный врач</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d2.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Голунская Ирина Германовна</div>
+                        <div class="difSwiper__slide-subtitle">Врач психиатр-нарколог высшей категории. Отличник здравоохранения РФ</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d3.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Кузьмина Елена Васильевна</div>
+                        <div class="difSwiper__slide-subtitle">Заслуженный работник здравоохранения РФ, медицинский психолог высшей категории</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d4.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Веселкова Любовь Анатольевна</div>
+                        <div class="difSwiper__slide-subtitle">Врач-трансфузиолог</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d5.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Балашов Виктор Викторович</div>
+                        <div class="difSwiper__slide-subtitle">Врач психотерапевт</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d6.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Демидов Андрей Николаевич</div>
+                        <div class="difSwiper__slide-subtitle">Врач психиатр-нарколог. Ведущий специалист клиники по лечению алкоголизма</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d7.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Хандохова Надежда Алексеевна</div>
+                        <div class="difSwiper__slide-subtitle">Врач-психиатр Высшей категории, Отличник здравоохранения РФ</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d8.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Ракшина Елена Николаевна</div>
+                        <div class="difSwiper__slide-subtitle">Врач психиатр-нарколог, психотерапевт по психосоматическим расстройствам</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d9.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Галкина Юлия Юрьевна</div>
+                        <div class="difSwiper__slide-subtitle">Семейный и детский психолог</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d10.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Базурин Сергей Юрьевич</div>
+                        <div class="difSwiper__slide-subtitle">Руководитель программы реабилитации, психолог</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d11.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Каплий Вячеслав Евгеньевич</div>
+                        <div class="difSwiper__slide-subtitle">Клинический психолог</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d12.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Гусева Светлана Владимировна</div>
+                        <div class="difSwiper__slide-subtitle">
+                            Клинический психолог-консультант, бизнес-тренер, 
+                            член Профессиональной Психотерапевтической Лиги, Член Российского Психологического Общества.
+                        </div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                    <div class="difSwiper__slide swiper-slide">
+                        <div class="difSwiper__slide-photo">
+                            <img src="./img/doctors/d13.png">
+                        </div>
+                        <div class="difSwiper__slide-title">Леоненко Юлия Михайловна</div>
+                        <div class="difSwiper__slide-subtitle">Психолог</div>
+                        <a href="#urgentCall" class="btn" data-fancybox>Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="license">
+        <div class="container">
+            <h2 class="license__title title">Лицензия на осуществление медицинской деятельности</h2>
+            <div class="license__swiper swiper">
+                <div class="license__wrapper swiper-wrapper">
+                    <a href="./img/licese/l1.jpg" class="license__slide swiper-slide">
+                        <img src="./img/licese/l1.jpg">
+                    </a>
+                    <a href="./img/licese/l2.jpg" class="license__slide swiper-slide">
+                        <img src="./img/licese/l2.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="photo">
+        <div class="container">
+            <h2 class="photo__title title">Фотографии Клиники</h2>
+            <div class="photo__swiper swiper">
+                <div class="photo__wrapper swiper-wrapper">
+                    <a href="./img/photoClinics/1.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/1.png">
+                    </a>
+                    <a href="./img/photoClinics/2.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/2.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/3.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/3.png">
+                    </a>
+                    <a href="./img/photoClinics/4.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/4.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/5.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/5.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/6.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/6.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/7.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/7.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/8.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/8.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/9.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/9.png">
+                    </a>
+                    <a href="./img/photoClinics/10.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/10.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/11.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/11.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/12.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/12.png">
+                    </a>
+                    <a href="./img/photoClinics/13.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/13.png">
+                    </a>
+                    <a href="./img/photoClinics/14.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/14.png">
+                    </a>
+                    <a href="./img/photoClinics/15.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/15.png">
+                    </a>
+                    <a href="./img/photoClinics/16.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/16.png">
+                    </a>
+                    <a href="./img/photoClinics/17.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/17.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/18.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/18.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/19.jpeg" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/19.jpeg">
+                    </a>
+                    <a href="./img/photoClinics/20.png" class="photo__slide swiper-slide">
+                        <img src="./img/photoClinics/20.png">
+                    </a>
+                </div>
+                <div class="photo__prev swiper-button-prev"></div>
+                <div class="photo__next swiper-button-next"></div>
+                <div class="photo__pagination swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="questions">
+        <div class="container">
+            <h2 class="questions__title title">Часто задаваемые вопросы</h2>
+            <div class="questions__wrapper">
+                <div class="questions__left">
+                    <div class="questions__accordeon">
+                        <div class="questions__accordeon-top">
+                            <p>Как проходит лечение?</p>
+                            <img src="./img/icon/close.png">
+                        </div>
+                        <div class="questions__accordeon-hidden">
+                            <p>
+                                <b>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quis fuga exercitationem et alias in, 
+                                    est atque eos debitis dolorem impedit aperiam repellat eum veritatis maxime voluptatibus, omnis minima. Quo!
+                                </b>
+                            </p>
+                            <ol>
+                                <li>
+                                    Вы оставляете заявку на сайте или звоните нам по телефону <a href="tel:+7 (999) 055-74-48">+7 (999) 055-74-48</a> или <a href="tel:+7 (8452) 775-77">+7 (8452) 775-77</a>
+                                </li>
+                                <li>Проводим дистанционное консультирование по основным вопросам лечения</li>
+                                <li>Согласовываем программы лечения.</li>
+                                <li>Осуществляется самостоятельный приезд в клинику, либо выезд к клиенту на дом по необходимости</li>
+                                <li>Заключаем договор.</li>
+                                <li>Начинаем оказание медицинской услуги (лечение в условиях стационара, поддержка специалистами в амбулаторный период лечения)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="questions__accordeon">
+                        <div class="questions__accordeon-top">
+                            <p>Даете ли вы гарантии?</p>
+                            <img src="./img/icon/close.png">
+                        </div>
+                        <div class="questions__accordeon-hidden">
+                            <p>
+                                <b>
+                                    В случае «срыва» в течении года после прохождения полного курса лечебно-диагностической программы и программы реабилитации клиника бесплатно проводит детоксикацию пациента
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="questions__accordeon">
+                        <div class="questions__accordeon-top">
+                            <p>Какие у вас условия приема?</p>
+                            <img src="./img/icon/close.png">
+                        </div>
+                        <div class="questions__accordeon-hidden">
+                            <p>
+                                <b>
+                                    Мы принимаем на лечение наркомании и алкоголизма пациентов в возрасте от 18 до 60 лет, вне зависимости от «стажа» зависимости, состояния организма и мотивации на выздоровление. Все резиденты нашей клиники проживают в комфортных и безопасных условиях, способствующих более быстрому и эффективному выздоровлению.
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="questions__accordeon">
+                        <div class="questions__accordeon-top">
+                            <p>Как проходит лечение?</p>
+                            <img src="./img/icon/close.png">
+                        </div>
+                        <div class="questions__accordeon-hidden">
+                            <ol>
+                                <li>
+                                    Вы оставляете заявку на сайте или звоните нам по телефону <a href="tel:+7 (999) 055-74-48">+7 (999) 055-74-48</a> или <a href="tel:+7 (8452) 775-77">+7 (8452) 775-77</a>
+                                </li>
+                                <li>Проводим дистанционное консультирование по основным вопросам лечения</li>
+                                <li>Согласовываем программы лечения.</li>
+                                <li>Осуществляется самостоятельный приезд в клинику, либо выезд к клиенту на дом по необходимости</li>
+                                <li>Заключаем договор.</li>
+                                <li>Начинаем оказание медицинской услуги (лечение в условиях стационара, поддержка специалистами в амбулаторный период лечения)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="questions__right">
+                    <img src="./img/photoClinics/21.png">
+                    <p>
+                        Клиника “Миннесота” работает в сфере психического здоровья и специализируется на таких направлениях как: психиатрия, наркология, психологическое консультирование, терапия, неврология, кардиология, лабораторные исследования, массаж.
+                        Специалистами клиники оказывается профессиональная помощь при психических расстройствах, психологических, психосоматических проблемах и зависимостях. Лечение возможно как в стационарном, так и в амбулаторном режимах.
+                    </p>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="feedback__wrapper">
+                    <div class="feedback__title">Свяжитесь с нами или мы вам перезвоним</div>
+                    <div class="feedback__form">
+                        <div class="feedback__labelWrap">
+                            <input type="text" placeholder="" class="feedback__input">
+                            <label class="feedback__label">Ваше Имя*</label>
+                        </div>
+                        <div class="feedback__labelWrap">
+                            <input type="text" placeholder="" name="phone" class="feedback__input">
+                            <label class="feedback__label">Ваш телефон*</label>
+                        </div>
+                        <button class="btn btn--wTransp">Отправить</button>
+                    </div>
+                    <img src="./img/feedb.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news">
+        <div class="container">
+            <div class="news__titleWrap">
+                <h2 class="news__title title">Новости</h2>
+                <div class="news__navigation">
+                    <div class="news__prev swiper-button-prev"></div>
+                    <div class="news__next swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="news__swiper swiper">
+                <div class="news__wrapper swiper-wrapper">
+                    <div class="news__slide swiper-slide">
+                        <img src="./img/banner/AnyConv.com__b1.png">
+                        <div class="news__slide-title">Тренинг по клиентоориентированности в "Миннесоте"</div>
+                        <p>
+                            27 февраля в клинике "Миннесота" прошёл тренинг по клиентоориентированности! Наши 
+                            специалисты постоянно повышают свой профессиональный уровень как в медицинской, так 
+                            и в сервисной части работы с на...
+                        </p>
+                        <div class="news__slide-date">29 Февраля 2024</div>
+                    </div>
+                    <div class="news__slide swiper-slide">
+                        <img src="./img/banner/AnyConv.com__b1.png">
+                        <div class="news__slide-title">Тренинг по клиентоориентированности в "Миннесоте"</div>
+                        <p>
+                            27 февраля в клинике "Миннесота" прошёл тренинг по клиентоориентированности! Наши 
+                            специалисты постоянно повышают свой профессиональный уровень как в медицинской, так 
+                            и в сервисной части работы с на...
+                        </p>
+                        <div class="news__slide-date">29 Февраля 2024</div>
+                    </div>
+                    <div class="news__slide swiper-slide">
+                        <img src="./img/banner/AnyConv.com__b1.png">
+                        <div class="news__slide-title">Тренинг по клиентоориентированности в "Миннесоте"</div>
+                        <p>
+                            27 февраля в клинике "Миннесота" прошёл тренинг по клиентоориентированности! Наши 
+                            специалисты постоянно повышают свой профессиональный уровень как в медицинской, так 
+                            и в сервисной части работы с на...
+                        </p>
+                        <div class="news__slide-date">29 Февраля 2024</div>
+                    </div>
+                    <div class="news__slide swiper-slide">
+                        <img src="./img/banner/AnyConv.com__b1.png">
+                        <div class="news__slide-title">Тренинг по клиентоориентированности в "Миннесоте"</div>
+                        <p>
+                            27 февраля в клинике "Миннесота" прошёл тренинг по клиентоориентированности! Наши 
+                            специалисты постоянно повышают свой профессиональный уровень как в медицинской, так 
+                            и в сервисной части работы с на...
+                        </p>
+                        <div class="news__slide-date">29 Февраля 2024</div>
+                    </div>
+                    <div class="news__slide swiper-slide">
+                        <img src="./img/banner/AnyConv.com__b1.png">
+                        <div class="news__slide-title">Тренинг по клиентоориентированности в "Миннесоте"</div>
+                        <p>
+                            27 февраля в клинике "Миннесота" прошёл тренинг по клиентоориентированности! Наши 
+                            специалисты постоянно повышают свой профессиональный уровень как в медицинской, так 
+                            и в сервисной части работы с на...
+                        </p>
+                        <div class="news__slide-date">29 Февраля 2024</div>
+                    </div>
+                    <div class="news__slide swiper-slide">
+                        <img src="./img/banner/AnyConv.com__b1.png">
+                        <div class="news__slide-title">Тренинг по клиентоориентированности в "Миннесоте"</div>
+                        <p>
+                            27 февраля в клинике "Миннесота" прошёл тренинг по клиентоориентированности! Наши 
+                            специалисты постоянно повышают свой профессиональный уровень как в медицинской, так 
+                            и в сервисной части работы с на...
+                        </p>
+                        <div class="news__slide-date">29 Февраля 2024</div>
+                    </div>
+                </div>
+                <div class="news__pagination swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="n3">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a href="#" class="footer__top">
+                    <img src="./img/logoo.jpeg" class="logo">
+                    <p>Потенциал Здоровья</p>
+                </a>
+                <div class="footer__bottom">
+                    <div class="footer__bottomContact">
+                        <div class="footer__bottomContact-title">Наши контакты</div>
+                        <div class="footer__bottomContact-item">
+                            <p>Телефон:</p>
+                            <a href="tel: +7 (845) 242-68-71">+7 (845) 242-68-71</a>
+                        </div>
+                        <div class="footer__bottomContact-item">
+                            <p>Адрес:</p>
+                            <p>Белоглинская 22А</p>
+                        </div>
+                        <div class="footer__bottomContact-item">
+                            <p>Почта:</p>
+                            <a href="mailto: marshak.saratov@gmail.com">marshak.saratov@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="" id="ofice"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="callback">
+        <img src="./img/callback.jpeg" class="modal__img">
+        <div class="modal__wrapper">
+            <div class="modal__title">Заявка на консультацию</div>
+            <p>
+                Оставьте заявку на бесплатную консультацию и в течении 10 минут с Вами 
+                свяжется наш специалист и ответит на все интересующие вопросы
+            </p>
+            <div class="modal__form">
+                <input type="text" class="modal__input" placeholder="Введите имя">
+                <input type="text" class="modal__input" name="phone" placeholder="Введите номер телефона">
+                <button class="btn">Получить консультацию</button>
+                <p>Я принимаю <a href="#">условия передачи информации</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="urgentCall">
+        <div class="modal__flex">
+            <div class="modal__left">
+                <p>Наши специалисты проводят консультации!</p>
+                <div class="modal__title">Вы можете записаться на консультацию!</div>
+                <img src="./img/modalDoc.png">
+            </div>
+            <div class="modal__wrapper">
+                <div class="modal__title">Записаться на консультацию</div>
+                <p>
+                    Оставьте заявку на бесплатную консультацию и в течении 10 минут с Вами 
+                    свяжется наш специалист и ответит на все интересующие вопросы
+                </p>
+                <div class="modal__form">
+                    <input type="text" class="modal__input" placeholder="Введите имя">
+                    <input type="text" class="modal__input" name="phone" placeholder="Введите номер телефона">
+                    <button class="btn">Отправить заявку</button>
+                    <p>Я принимаю <a href="#">условия передачи информации</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 <script src="./plugins/jquery/jquery-3.6.0.min.js"></script>
+<script src="./plugins/swiper/swiper-bundle.min.js"></script>
+<script src="./plugins/fancybox/fancybox.umd.js"></script>
+<script src="./plugins/mask/imask.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="./js/map.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>
